@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
-  - '6'
+  - "6"
+  - "8"
+  - "9"
+
+install:
+  - npm install
+  - npm install -g codecov
+
 script:
-  - npm run test
   - npm run build
-branches:
-  only:
-    - master
+  - codecov
+
+notifications:
+  email: false
