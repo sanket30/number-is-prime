@@ -1,5 +1,23 @@
 export function isPrimeNumber(num) {
-  for(var i = 2; i < Math.sqrt(num); i++)
-    if(num % i === 0) return false;
-  return num !== 1;
+let isPrime = true;
+  if (num >= 2) {
+      if(num === 2 || num === 3){
+          isPrime = true;
+      }
+      else if (num % 2 === 0) {
+          isPrime = false;
+      }
+      else {
+          for (let i = 3; i <= Math.floor(Math.sqrt(num)); i += 2) {
+              if (num % i === 0) {
+                  isPrime = false;
+                  break;
+              }
+          }
+      }
+  }
+  else {
+      isPrime = false;
+  }
+  return isPrime;
 }

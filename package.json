@@ -1,6 +1,6 @@
 {
-  "name": "number-is-prime",
-  "version": "1.0.0",
+  "name": "is-num-prime",
+  "version": "1.0.1",
   "description": "npm modules to check if number is prime or not",
   "main": "dist/index.js",
   "scripts": {
